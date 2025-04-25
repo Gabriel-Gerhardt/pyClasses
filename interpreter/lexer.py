@@ -5,6 +5,16 @@ class Lexer:
         self.readPosition= readPosition
         self.ch = ch
 
+    def readChar(self):
+        if self.readPosition>=len(self.input):
+            self.ch=0
+        else:
+            self.ch = self.input[self.readPosition]
+        self.position=self.readPosition
+        self.readPosition += 1
+
+
 def newLexer(input):
     l = Lexer(input)
+    l.readChar()
     return l
