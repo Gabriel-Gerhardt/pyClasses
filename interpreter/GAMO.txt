@@ -1,4 +1,6 @@
-gamofunc add(gamofloat x, gamoint y){
-    gamoreturn x+y;
+gamofunc add(){
+    gamo y = 2
+    gamo x = 10
+    gamoreturn x+y
 
 }
