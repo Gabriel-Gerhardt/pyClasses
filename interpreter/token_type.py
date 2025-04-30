@@ -1,6 +1,6 @@
 class Token:
-    def __init__(self, type_, literal):
-        self.type = type_
+    def __init__(self, type, literal):
+        self.type = type
         self.literal = literal
 
     def __repr__(self):
@@ -32,3 +32,9 @@ RBRACE    = "}"
 GAMOFUNC = "FUNCTION"
 GAMO      = "LET"
 GAMORETURN   ="RETURN"
+REAL = "TRUE"
+BARCA= "FALSE"
+GAMOIF ="IF"
+GAMOELSE = "ELSE"
+EQ = "=="
+NOT_EQ= "!="
