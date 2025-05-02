@@ -23,8 +23,10 @@ class Lexer:
         tok: Token
 
         if next_char == "=":
-            if self.peekChar() == ""
-           tok = Token(ASSIGN, next_char)
+            if self.peekChar() == "=":
+                tok = Token(EQ, next_char+str(self.peekChar()))
+            else:
+                tok = Token(ASSIGN, next_char)
         elif next_char == "+":
            tok = Token(PLUS, next_char)
         elif next_char == "-":
@@ -49,7 +51,10 @@ class Lexer:
            tok = Token(SLASH, next_char)
 
         elif next_char == "!":
-            tok = Token(BANG, next_char)
+            if self.peekChar() == "=":
+                tok = Token(NOT_EQ, next_char+str(self.peekChar()))
+            else:
+                tok = Token(BANG, next_char)
         elif next_char == "*":
            tok = Token(ASTERISK, next_char)
         elif next_char.isalpha():  # Identificadores começam com letra
